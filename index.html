@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Leon Adarcewicz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="nav">
+      <p>Leon Adarcewicz</p>
+      <ul class="navPanel" id="nav-move">
+        <li><a id="aboutBttn" href="#about">About</a></li>
+        <li><a id="projectBttn" href="#projects">Projects</a></li>
+        <li><a id="contactBttn" href="#contact">Contact</a></li>
+      </ul>
+      <div class="menuLines" id="menu-1">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+    </div>
+    <div class="logo">
+      <img src="pictures/logo1.svg">
+    </div>
+    <canvas id="flyingDots"></canvas>
+    <div class="mainPanel hidden">
+      <div id="about">
+        <div class="transtarentCover">
+          <div class="prev-next-button previous invisible">
+            <svg viewbox="0 0 100 100">
+              <path class="arrow" d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"
+              transform=" translate(15,0)">
+            </svg>
+          </div>
+          <div class="prev-next-button next">
+            <svg viewbox="0 0 100 100">
+              <path class="arrow" d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z "
+              transform="translate(85,100) rotate(180) ">
+            </svg>
+          </div>
+          <canvas id="canvasPic"  style="border: 2px solid"></canvas>
+          <div class="mainInfo left">
+            <div class="myPhoto">
+              <img class="myPhoto" src="pictures/me.jpg" alt="my photo">
+            </div>
+            <div class="shortSpeach">
+              <h3 class="h3">Leon Adarcewicz</h3>
+              <p>I'm a passionate of a programming.
+                I started my coding adventure in 2016 and since then I improve my knowledge
+              and skills every day. Creating a software is a pure pleasure for me and I want to
+              share it with you!</p>
+            </div>
+          </div>
+          <div class="mainInfo right invisible">
+            <div class="shortSpeach">
+              <p>If you need a web page, back-soft, web-app, database program or anything else
+              related to the to the programming and computer world, do not hesitate to reach out
+              to me. I will do my best to help you, and together we will create an amazing things!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="projects">
+        <div class="headers"><h2>My passion results</h2></div>
+        <div class="projCont">
+          <div class="tiles">
+            <div class="CSh tile" data-scale="1.2"><div class="photo" style="background-image: url('pictures/CSharp.svg')"></div></div>
+            <div class="HTML5 tile" data-scale="1.2"><div class="photo" style="background-image: url('pictures/HTML5.svg')"></div></div>
+            <div class="CSS tile" data-scale="1.2"><div class="photo" style="background-image: url('pictures/CSS.svg')"></div></div>
+            <div class="JS tile" data-scale="1.2"><div class="photo" style="background-image: url('pictures/JS.svg')"></div></div>
+            <div class="JQ tile" data-scale="1.2"><div class="photo" style="background-image: url('pictures/JQ.svg')"></div></div>
+          </div>
+          <div class="triangle hidden"></div>
+          <div class="langDescr hidden">
+            <!-- C# code go below -->
+            <div class="CShDescr hidden">
+              <h2>You can download my app and test it</h2>
+              <a href="https://drive.google.com/drive/folders/1uOkr1GQdG7GrlRkySh8KgzThlaH5Lyg0?usp=sharing" target="_blank">
+                <img class="CShLinks" src="pictures/GoogleDrive.svg" alt="Google Drive logo">
+              </a>
+              <h2>or you can check my code</h2>
+              <a href="https://github.com/ucios-1/PCpremium" target="_blank">
+                <img class="CShLinks" src="pictures/github.svg" alt="Hit Gub logo">
+              </a>
+
+            </div>
+            <!-- HTML code go below -->
+            <div class="HTML5Descr hidden">
+              <h2 class="nice">Press keyboard combination below and you will be able to examine this page.</h2>
+              <img src="pictures/keyboard2.svg" alt="CTRL + SHIFT + I">
+            </div>
+            <!-- CSS code go below -->
+            <div class="CSSDescr hidden">
+<pre>
+  <code>
+    <span class="red">html</span> {
+      height: <span class="orange">98.1%</span>;
+      width: <span class="orange">100%</span>;
+      margin: <span class="orange">0</span>;
+    }
+
+    <span class="red">body</span> {
+      height: <span class="orange">100%</span>;
+      margin: <span class="orange">0</span>;
+    }
+
+    <span class="blue">#flyingDots</span> {
+      background-color: black;
+      width: <span class="orange">100%</span>;
+      height: <span class="orange">101.9%</span>;
+      margin-bottom: <span class="orange">-1%</span>;
+    }
+
+    <span class="orange">.nav</span> {
+      width: <span class="orange">100%</span>;
+      background-color: #121113;
+      position: fixed;
+      display: flex;
+      align-items: center;
+      font: normal normal normal <span class="orange">25px</span>/<span class="orange">1.4em</span> <span class="green">'Open Sans'</span>,<span class="orange">sans-serif</span>;
+      box-shadow: <span class="orange">1px</span> <span class="orange">2px</span> <span class="orange">4px</span> rgba(250, 250, 250, .5);
+      color: #FFFFFF;
+      z-index: <span class="orange">250</span>;
+    }
+
+    <span class="orange">.navPanel</span> {
+      position: relative;
+      left: <span class="orange">43%</span>;
+      flex-grow: <span class="orange">8</span>;
+      margin: <span class="orange">0</span>;
+      list-style-type: none;
+      display: flex;
+      justify-content: flex-end;
+      font: normal normal normal <span class="orange">25px</span>/<span class="orange">1.4em</span> <span class="green">'Open Sans'</span>,<span class="orange">sans-serif</span>;
+      color: #FFFFFF;
+      z-index: <span class="orange">100</span>;
+    }
+
+    <span class="orange">.nav</span><span class="red"> p </span>{
+      margin-left: <span class="orange">30px</span>;
+      flex-grow: <span class="orange">2</span>;
+    }
+
+    <span class="orange">.navPanel</span><span class="red"> ul </span>{
+      box-shadow: none;
+    }
+
+    <span class="red">li a </span>{
+        display: block;
+        color: #FFFFFF;
+        padding: <span class="orange">20px</span>;
+        text-decoration: none;
+    }
+
+    <span class="orange">.menuLines</span> {
+      flex-grow: <span class="orange">1</span>;
+      z-index: <span class="orange">150</span>;
+    }
+
+    <span class="orange">.menuLines .line</span> {
+      width: <span class="orange">50px</span>;
+      height: <span class="orange">5px</span>;
+      background-color: #ecf0f1;
+      display: block;
+      margin: <span class="orange">8px</span> auto;
+      -webkit-transition: all <span class="orange">0.3s</span> ease-in-out;
+      -moz-transition: all <span class="orange">0.3s</span> ease-in-out;
+      -o-transition: all <span class="orange">0.3s</span> ease-in-out;
+      transition: all <span class="orange">0.3s</span> ease-in-out;
+      cursor: pointer;
+    }
+
+    <span class="blue">#menu-1</span><span class="orange">.is-active .line:nth-child</span><span class="violet">(</span><span class="orange">2</span><span class="violet">)</span> {
+      opacity: <span class="orange">0</span>;
+    }
+
+    <span class="blue">#menu-1</span><span class="orange">.is-active .line:nth-child</span><span class="violet">(</span><span class="orange">1</span><span class="violet">)</span> {
+      -webkit-transform: <span class="turquoise">translateY</span>(<span class="orange">13px</span>) <span class="turquoise">rotate</span>(<span class="orange">45deg</span>);
+      -moz-transform: <span class="turquoise">translateY</span>(<span class="orange">13px</span>) <span class="turquoise">rotate</span>(<span class="orange">45deg</span>);
+      -ms-transform: <span class="turquoise">translateY</span>(<span class="orange">13px</span>) <span class="turquoise">rotate</span>(<span class="orange">45deg</span>);
+      -o-transform: <span class="turquoise">translateY</span>(<span class="orange">13px</span>) <span class="turquoise">rotate</span>(<span class="orange">45deg</span>);
+      transform: <span class="turquoise">translateY</span>(<span class="orange">13px</span>) <span class="turquoise">rotate</span>(<span class="orange">45deg</span>);
+    }
+
+    <span class="blue">#menu-1</span><span class="orange">.is-active .line:nth-child</span><span class="violet">(</span><span class="orange">3</span><span class="violet">)</span> {
+      -webkit-transform: <span class="turquoise">translateY</span>(<span class="orange">-13px</span>) <span class="turquoise">rotate</span>(<span class="orange">-45deg</span>);
+      -moz-transform: <span class="turquoise">translateY</span>(<span class="orange">-13px</span>) <span class="turquoise">rotate</span>(<span class="orange">-45deg</span>);
+      -ms-transform: <span class="turquoise">translateY</span>(<span class="orange">-13px</span>) <span class="turquoise">rotate</span>(<span class="orange">-45deg</span>);
+      -o-transform: <span class="turquoise">translateY</span>(<span class="orange">-13px</span>) <span class="turquoise">rotate</span>(<span class="orange">-45deg</span>);
+      transform: <span class="turquoise">translateY</span>(<span class="orange">-13px</span>) <span class="turquoise">rotate</span>(<span class="orange">-45deg</span>);
+    }
+
+    <span class="blue">#nav-move</span><span class="orange">.is-active</span> {
+      -webkit-transform: <span class="turquoise">translateX</span>(<span class="orange">-61%</span>);
+      -moz-transform: <span class="turquoise">translateX</span>(<span class="orange">-61%</span>);
+      -ms-transform: <span class="turquoise">translateX</span>(<span class="orange">-61%</span>);
+      -o-transform: <span class="turquoise">translateX</span>(<span class="orange">-61%</span>);
+      transform: <span class="turquoise">translateX</span>(<span class="orange">-61%</span>);
+      transition: all <span class="orange">0.4s</span> ease-in-out;
+    }
+
+    <span class="blue">#nav-move</span><span class="orange">.is-inactive</span> {
+      -webkit-transform: <span class="turquoise">translateX</span>(<span class="orange">61%</span>);
+      -moz-transform: <span class="turquoise">translateX</span>(<span class="orange">61%</span>);
+      -ms-transform: <span class="turquoise">translateX</span>(<span class="orange">61%</span>);
+      -o-transform: <span class="turquoise">translateX</span>(<span class="orange">61%</span>);
+      transform: <span class="turquoise">translateX</span>(<span class="orange">61%</span>);
+      transition: all <span class="orange">0.5s</span> ease-in-out;
+    }
+
+    <span class="orange">.logo</span> {
+      height: <span class="orange">50%</span>;
+      width: <span class="orange">50%</span>;
+      position: fixed;
+      top: <span class="orange">25%</span>;
+      left: <span class="orange">25%</span>;
+      background: <span class="turquoise">url</span>(<span class="green">'pictures/logo1.svg'</span>) no-repeat center center;
+      background-size: <span class="orange">100%</span> <span class="orange">100%</span>;
+    }
+
+    <span class="orange">.mainPanel</span> {
+      height: <span class="orange">101.9%</span>;
+    }
+
+    <span class="orange">.transtarentCover</span> {
+      background-color: rgb(124, 127, 132);
+      background-color: rgba(124, 127, 132, 0.7);
+      height: <span class="orange">100%</span>;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    <span class="orange">.prev-next-button</span> {
+      position: absolute;
+      top: <span class="orange">50%</span>;
+      width: <span class="orange">60px</span>;
+      height: <span class="orange">60px</span>;
+      border-radius: <span class="orange">50%</span>;
+      background: white;
+      transform: <span class="turquoise">translateY</span>(<span class="orange">-50%</span>);
+      z-index: <span class="orange">250</span>;
+    }
+
+    <span class="orange">.previous</span> {
+      left: <span class="orange">10px</span>;
+    }
+
+    <span class="orange">.next</span> {
+      right: <span class="orange">10px</span>;
+    }
+
+    <span class="orange">.prev-next-button</span><span class="red"> svg </span>{
+      position: absolute;
+      left: <span class="orange">20%</span>;
+      top: <span class="orange">20%</span>;
+      width: <span class="orange">60%</span>;
+      height: <span class="orange">60%</span>;
+    }
+
+    <span class="orange">.arrow</span> {
+      fill: #333;
+    }
+
+    <span class="orange">.mainInfo</span> {
+      max-width: <span class="orange">800px</span>;
+      min-width: <span class="orange">500px</span>;
+      background-color: rgb(124, 127, 132);
+      background-color: rgba(124, 127, 132, 0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: <span class="orange">150</span>;
+    }
+
+    <span class="orange">.myPhoto</span> {
+      width: <span class="orange">285px</span>;
+      height: <span class="orange">285px</span>;
+      border-radius: <span class="orange">50%</span>;
+      overflow: hidden;
+      margin: <span class="orange">20px 0 0 0</span>;
+      box-shadow: <span class="orange">0 0 18px</span> #111;
+    }
+
+    <span class="orange">.myPhoto</span><span class="red"> img </span>{
+      margin: <span class="orange">0</span>;
+    }
+
+    <span class="orange">.shortSpeach</span> {
+      color: #FFFFFF;
+      font: normal normal normal <span class="orange">25px</span>/<span class="orange">1.4em</span> <span class="green">'Open Sans'</span>,<span class="orange">sans-serif</span>;
+      width: <span class="orange">90%</span>;
+    }
+
+    <span class="orange">.h3</span> {
+      font-size: <span class="orange">35px</span>;
+    }
+
+    <span class="orange">.headers</span> {
+      height: <span class="orange">80px</span>;
+      display: flex;
+      align-items: center;
+      background-color: #5d5c5c;
+    }
+
+    <span class="orange">.headers</span><span class="red"> h2 </span>{
+      color: #FFFFFF;
+      font: normal normal normal <span class="orange">30px</span>/<span class="orange">1.4em</span> <span class="green">'Open Sans'</span>,<span class="orange">sans-serif</span>;
+      width: <span class="orange">100%</span>;
+      text-align: center;
+    }
+
+    <span class="blue">#about</span> {
+      color: white;
+      height: <span class="orange">100%</span>;
+      overflow: hidden;
+      background: <span class="turquoise">url</span>(<span class="green">'pictures/mainPanelPic.jpg'</span>) no-repeat center center;
+      background-size: cover;
+      background-color: black;
+    }
+
+    <span class="red">h3 </span>{
+      text-align: center;
+    }
+
+    <span class="blue">#projects</span> {
+      height: <span class="orange">100%</span>;
+      background:<span class="turquoise">url</span>(<span class="green">'pictures/projectsPhoto.jpg'</span>) no-repeat center center;
+      background-size: cover;
+    }
+
+    <span class="blue">#projects</span><span class="red"> h2 </span>{
+      text-align: center;
+    }
+
+    <span class="orange">.projCont</span> {
+      position: relative;
+      top: <span class="orange">100px</span>;
+      left: <span class="orange">15%</span>;
+      right: <span class="orange">15%</span>;
+      width: <span class="orange">70%</span>;
+      height: <span class="orange">80%</span>;
+      display: flex;
+      flex-direction: column;
+    }
+
+    <span class="orange">.tiles</span> {
+      width: <span class="orange">100%</span>;
+      height: <span class="orange">20%</span>;
+      margin-bottom: <span class="orange">2%</span>;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    <span class="orange">.tile</span> {
+      cursor: pointer;
+      width: <span class="orange">30%</span>;
+      height: <span class="orange">100%</span>;
+    }
+
+    <span class="orange">.photo</span> {
+      top: <span class="orange">0</span>;
+      left: <span class="orange">0</span>;
+      width: <span class="orange">100%</span>;
+      height: <span class="orange">100%</span>;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size:contain;
+      transition: transform <span class="orange">.5s</span> ease-out;
+    }
+
+    <span class="orange">.langDescr</span> {
+      overflow-y: scroll;
+      width: <span class="orange">100%</span>;
+      height: <span class="orange">75%</span>;
+      background-color: #f3f3f3cf;
+      z-index: <span class="orange">2</span>;
+    }
+
+    <span class="orange">.CShDescr</span><span class="red"> img </span>{
+      width: <span class="orange">10%</span>;
+      margin-left: <span class="orange">45%</span>;
+    }
+
+    <span class="orange">.HTML5Descr</span><span class="red"> img </span>{
+      width: <span class="orange">60%</span>;
+      margin-left: <span class="orange">20%</span>;
+    }
+
+    <span class="orange">.HTML5Descr</span><span class="red"> h2</span>, <span class="orange">.CShDescr</span><span class="red"> h2 </span>{
+      font-size: <span class="orange">50px</span>;
+      width: <span class="orange">60%</span>;
+      margin-left: <span class="orange">20%</span>;
+    }
+
+    <span class="orange">.hidden</span> {
+      display: none;
+    }
+
+    <span class="orange">.invisible</span> {
+      visibility: hidden;
+    }
+
+    <span class="orange">.triangle</span> {
+      position: relative;
+      width: <span class="orange">0</span>;
+      height: <span class="orange">0</span>;
+      border-left: <span class="orange">40px</span> solid transparent;
+      border-right: <span class="orange">40px</span> solid transparent;
+      border-bottom: <span class="orange">20px</span> solid #f3f3f3cf;
+      z-index: <span class="orange">10</span>;
+    }
+
+    <span class="orange">.langDescr</span><span class="red"> pre </span>{
+      font: normal normal normal <span class="orange">19px</span>/<span class="orange">1.4em</span> <span class="green">'Open Sans'</span>,<span class="orange">sans-serif</span>;
+    }
+
+    <span class="orange">.blue</span>{ color: <span class="blue">#0400fb</span>; }
+    <span class="orange">.turquoise</span>{ color: <span class="turquoise">#008aa5</span>; }
+    <span class="orange">.violet</span>{ color: <span class="violet">#e204e2</span>; }
+    <span class="orange">.red</span>{ color: <span class="red">#d40000</span>; }
+    <span class="orange">.gray</span>{ color: <span class="gray">#868686</span>; }
+    <span class="orange">.green</span>{ color: <span class="green">#2a751d</span>; }
+    <span class="orange">.orange</span>{ color: <span class="orange">#c55903</span>; }
+
+    <span class="blue">#contact</span> {
+      height: <span class="orange">100%</span>;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font: normal normal normal <span class="orange">35px</span>/<span class="orange">1.4em</span> <span class="green">'Open Sans'</span>,<span class="orange">sans-serif</span>;
+      background-color: black;
+      background-image:<span class="turquoise">url</span>(<span class="green">'pictures/no_mail_box2.jpg'</span>);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: <span class="orange">55% 100%</span>;
+    }
+
+    <span class="orange">.contact-form</span> {
+      width: <span class="orange">40%</span>;
+      margin-left: <span class="orange">10%</span>;
+    }
+
+    <span class="red">form </span>{
+      transition: all <span class="orange">4s</span> ease-in-out;
+    }
+
+    <span class="red">form </span>.submit {
+      background: <span class="red">#bb1b21</span>;
+      border-color: transparent;
+      color: white;
+      font-weight: bold;
+      letter-spacing: <span class="orange">2px</span>;
+      height: <span class="orange">50px</span>;
+      margin-top: <span class="orange">30px</span>;
+      padding: <span class="orange">10px 0 15px 0</span>;
+    }
+
+    <span class="orange">.form-control</span> {
+      width: <span class="orange">100%</span>;
+      background: transparent;
+      border: none;
+      outline: none;
+      border-bottom: <span class="orange">1px</span> solid white;
+      color: #fff;
+      font-size: <span class="orange">30px</span>;
+      margin-bottom: <span class="orange">16px</span>;
+    }
+
+    <span class="red">input </span>{
+      height: <span class="orange">45px</span>;
+    }
+
+    <span class="red">textarea </span>{
+      height: <span class="orange">300px</span>;
+      font-size: <span class="orange">20px</span>;
+    }
+
+    <span class="orange">.contact</span> {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      color: white;
+    }
+
+    <span class="orange">.contactPhoto</span> {
+      width: <span class="orange">50%</span>;
+      height: <span class="orange">50%</span>;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    <span class="orange">.mailBox</span> {
+      height: <span class="orange">100%</span>;
+      width: <span class="orange">40%</span>;
+    }
+
+    <span class="gray">/*hover*/</span>
+    <span class="red">li </span><span class="orange">:hover</span> {
+        background-color: #121113;
+        color: #FFFFFF;
+        font-weight: bold;
+        border-bottom: solid <span class="orange">2px</span> #FFFFFF;
+    }
+
+    <span class="red">form </span><span class="orange">.submit:hover</span> {
+      cursor: pointer;
+      background-color: #848383;
+    }
+
+    <span class="orange">.slider:hover</span> {
+      cursor: pointer;
+    }
+
+    <span class="orange">.prev-next-button:hover</span> {
+      box-shadow: <span class="orange">0 0 20px</span> rgb(10, 10, 10);
+      box-shadow: <span class="orange">0 0 20px</span> rgba(10, 10, 10, .9);
+      background-color: #f5f5f5;
+    }
+
+  </code>
+</pre>
+            </div>
+            <!-- JS code go below -->
+            <div class="JSDescr hidden">
+<pre>
+  <code>
+    <span class="violet">var</span> canvas = <span class="red">document</span>.<span class="turquoise">querySelector</span>(<span class="green">'#canvasPic'</span>);
+    <span class="red">canvas</span>.<span class="red">width</span> = <span class="red">window</span>.<span class="red">innerWidth</span>;
+    <span class="red">canvas</span>.<span class="red">height</span> = <span class="red">window</span>.<span class="red">innerHeight</span><span class="turquoise"> &#x2215; </span><span class="orange">1.09</span>();
+    <span class="red">canvas</span>.<span class="red">style</span>.<span class="red">cssText</span> = <span class="green">'position: absolute; top: 8%; z-index: 200;'</span>;
+
+    <span class="violet">var</span> c = <span class="red">canvas</span>.<span class="turquoise">getContext</span>('2d');
+
+    <span class="violet">var</span> image = <span class="violet">new</span> <span class="orange">Image</span>();
+    <span class="violet">var</span> image2 = <span class="violet">new</span> <span class="orange">Image</span>();
+    <span class="violet">var</span> picArray = [];
+
+    <span class="red">image</span>.<span class="blue">onload</span> = <span class="violet">function</span>(){
+      <span class="violet">function</span> <span class="blue">PicLines</span>(positionPic, positionMove, dx, back, image, image2){
+        <span class="red">this</span>.<span class="red">positionPic</span> = positionPic;
+        <span class="red">this</span>.<span class="red">positionMove</span> = positionMove;
+        <span class="red">this</span>.<span class="red">startPos</span> = <span class="red">canvas</span>.<span class="red">width</span><span class="turquoise"> &#x2215; </span><span class="orange">2</span>;
+        <span class="red">this</span>.<span class="red">dx</span> = dx;
+        <span class="red">this</span>.<span class="red">image</span> = image;
+        <span class="red">this</span>.<span class="red">imageBack</span> = image;
+        <span class="red">this</span>.<span class="red">image2</span> = image2;
+        <span class="red">this</span>.<span class="red">back</span> = -back;
+
+        <span class="red">this</span>.<span class="blue">draw</span> = <span class="violet">function</span>(){
+          <span class="red">c</span>.<span class="blue">drawImage</span>(<span class="red">this</span>.<span class="red">image</span>, <span class="orange">100</span>, <span class="red">this</span>.<span class="red">positionPic</span>, <span class="red">image</span>.<span class="red">width</span> - <span class="orange">220</span>, <span class="red">image</span>.<span class="red">height</span><span class="turquoise"> &#x2215; </span><span class="orange">400</span>,
+                      <span class="red">this</span>.<span class="red">startPos</span>, <span class="red">this</span>.<span class="red">positionMove</span>, <span class="red">canvas</span>.<span class="red">width</span><span class="turquoise"> &#x2215; </span><span class="orange">2</span>, <span class="red">canvas</span>.<span class="red">height</span><span class="turquoise"> &#x2215; </span><span class="orange">400</span>);
+        };
+        <span class="red">this</span>.<span class="blue">update</span> = <span class="violet">function</span>(){
+          <span class="red">this</span>.<span class="red">startPos</span> <span class="turquoise">-=</span> <span class="red">this</span>.<span class="red">dx</span>;
+          <span class="red">this</span>.<span class="blue">draw</span>();
+        };
+        <span class="red">this</span>.<span class="blue">checkPos</span> = <span class="violet">function</span>(){
+          <span class="violet">return</span><span class="red">this</span>.<span class="red">startPos</span>;
+        };
+        <span class="red">this</span>.<span class="blue">leftStopMov</span> = <span class="violet">function</span>(){
+          <span class="red">this</span>.<span class="red">startPos</span> = <span class="orange">0</span>;
+          <span class="red">this</span>.<span class="red">dx</span> = <span class="orange">0</span>;
+          <span class="red">this</span>.<span class="blue">leftChangePict</span>();
+        };
+        <span class="red">this</span>.<span class="blue">rightStopMov</span> = <span class="violet">function</span>(){
+          <span class="red">this</span>.<span class="red">startPos</span> = <span class="red">canvas</span>.<span class="red">width</span><span class="turquoise"> &#x2215; </span><span class="orange">2</span>;
+          <span class="red">this</span>.<span class="red">dx</span> = <span class="orange">0</span>;
+          <span class="red">this</span>.<span class="blue">rightChangePict</span>();
+        };
+        <span class="red">this</span>.<span class="blue">leftChangePict</span> = <span class="violet">function</span>(){<span class="red">this</span>.<span class="red">image</span> = <span class="red">this</span>.<span class="red">image2</span>;}
+        <span class="red">this</span>.<span class="blue">rightChangePict</span> = <span class="violet">function</span>(){<span class="red">this</span>.<span class="red">image</span> = <span class="red">this</span>.<span class="red">imageBack</span>;}
+      }
+
+      <span class="violet">for</span>(<span class="violet">var</span> i = <span class="orange">0</span>; i<span class="turquoise"> &#60; </span><span class="orange">400</span>; i<span class="turquoise">++</span>){
+        <span class="violet">var</span> position = (<span class="red">canvas</span>.<span class="red">height</span><span class="turquoise"> &#x2215; </span><span class="orange">400</span>) <span class="turquoise">*</span> i;
+        <span class="violet">var</span> dx = <span class="orange">Math</span>.<span class="turquoise">random</span>() <span class="turquoise">*</span> <span class="orange">10</span>;
+        <span class="violet">var</span> back = <span class="orange">Math</span>.<span class="turquoise">random</span>() <span class="turquoise">*</span> <span class="orange">10</span>;
+        <span class="violet">if</span>(dx<span class="turquoise"> &#60; </span><span class="orange">4</span>){dx <span class="turquoise">+=</span> <span class="orange">4</span>;}
+        <span class="violet">if</span>(back<span class="turquoise"> &#60; </span><span class="orange">4</span>){back <span class="turquoise">+=</span> <span class="orange">4</span>;}
+        <span class="red">picArray</span>.<span class="turquoise">push</span>(<span class="violet">new</span> <span class="orange">PicLines</span>(position, position, dx, back, image, image2));
+        picArray[i].<span class="blue">draw</span>();
+      }
+
+      <span class="violet">function</span> <span class="blue">movePicture</span>(){
+        <span class="blue">requestAnimationFrame</span>(movePicture);
+
+        <span class="red">c</span>.<span class="blue">clearRect</span>(<span class="orange">0</span>,<span class="orange">0</span>,innerWidth,innerHeight);
+        <span class="violet">for</span>(<span class="violet">var</span> j = <span class="orange">0</span>; j<span class="turquoise"> &#60; </span><span class="red">picArray</span>.<span class="red">length</span>; j<span class="turquoise">++</span>){
+          picArray[j].<span class="blue">update</span>();
+
+          <span class="violet">if</span>(picArray[j].<span class="blue">checkPos</span>() <= <span class="orange">0</span>){
+            picArray[j].<span class="blue">leftStopMov</span>();
+          } <span class="violet">else if</span>(picArray[j].<span class="blue">checkPos</span>() > <span class="red">canvas</span>.<span class="red">width</span><span class="turquoise"> &#x2215; </span><span class="orange">2</span>){
+            picArray[j].<span class="blue">rightStopMov</span>();
+          }
+        }
+      }
+
+    <span class="red">document</span>.<span class="turquoise">querySelector</span>(<span class="green">'.next'</span>).<span class="turquoise">addEventListener</span>(<span class="green">'click'</span>, <span class="violet">function</span>(){
+      <span class="violet">for</span>(<span class="violet">var</span> i = <span class="orange">0</span>; i<span class="turquoise"> &#60; </span><span class="red">picArray</span>.<span class="red">length</span>; i<span class="turquoise">++</span>){
+        picArray[i].<span class="red">dx</span> = -picArray[i].<span class="red">back</span>;
+      }
+      <span class="blue">movePicture</span>();
+    });
+    <span class="red">document</span>.<span class="turquoise">querySelector</span>(<span class="green">'.previous'</span>).<span class="turquoise">addEventListener</span>(<span class="green">'click'</span>, <span class="violet">function</span>(){
+      <span class="violet">for</span>(<span class="violet">var</span> i = <span class="orange">0</span>; i<span class="turquoise"> &#60; </span><span class="red">picArray</span>.<span class="red">length</span>; i<span class="turquoise">++</span>){
+        picArray[i].<span class="red">dx</span> = picArray[i].<span class="red">back</span>;
+      }
+      <span class="blue">movePicture</span>();
+    });
+    };
+
+    <span class="red">image</span>.src = <span class="green">"</span><span class="turquoise">https://images.unsplash.com/photo-1506452819137-0422416856b8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=35c3a22e647b11004efd8135de82164c&auto=format&fit=crop&w=1266&q=80</span><span class="green">"</span>;
+    <span class="red">image2</span>.src = <span class="green">"</span><span class="turquoise">https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjF9&s=5341e153d0297d2452a54157311caf33&auto=format&fit=crop&w=1350&q=80</span><span class="green">"</span>;
+
+  </code>
+</pre>
+            </div>
+            <!-- JQ code go below -->
+            <div class="JQDescr hidden">
+<pre>
+  <code>
+    <span class="blue">$</span>(<span class="red">document</span>).<span class="blue">ready</span>(() <span class="violet">=></span> {
+
+      <span class="blue">$</span>(<span class="green">'.menuLines'</span>).<span class="blue">click</span>(<span class="violet">function</span>(){
+        <span class="blue">$</span>(<span class="red">this</span>).<span class="blue">toggleClass</span>(<span class="green">'is-active'</span>);
+        <span class="violet">if</span>(<span class="blue">$</span>(<span class="green">'#nav-move'</span>).<span class="blue">hasClass</span>(<span class="green">'is-active'</span>)){
+          <span class="blue">$</span>(<span class="green">'#nav-move'</span>).<span class="blue">toggleClass</span>(<span class="green">'is-inactive'</span>);
+          <span class="blue">$</span>(<span class="green">'.mainPanel'</span>).<span class="blue">addClass</span>(<span class="green">'hidden'</span>);
+          <span class="blue">$</span>(<span class="green">'#flyingDots'</span>).<span class="blue">removeClass</span>(<span class="green">'hidden'</span>);
+          <span class="blue">$</span>(<span class="green">'.logo'</span>).<span class="blue">removeClass</span>(<span class="green">'hidden'</span>);
+        } <span class="violet">else</span> {
+          <span class="blue">$</span>(<span class="green">'#nav-move'</span>).<span class="blue">toggleClass</span>(<span class="green">'is-active'</span>);
+        }
+      });
+
+
+      <span class="blue">$</span>(<span class="green">'.previous'</span>).<span class="blue">on</span>(<span class="green">'click'</span>, <span class="violet">function</span>() {
+        <span class="blue">$</span>(<span class="green">'.previous'</span>).<span class="blue">fadeTo</span>(<span class="orange">300</span>, <span class="orange">0</span>);
+        <span class="blue">$</span>(<span class="green">'.left'</span>).<span class="blue">fadeTo</span>(<span class="orange">300</span>, <span class="orange">1</span>);
+        <span class="blue">$</span>(<span class="green">'.right'</span>).<span class="blue">fadeTo</span>(<span class="orange">500</span>, <span class="orange">0</span>);
+        <span class="blue">$</span>(<span class="green">'.next'</span>).<span class="blue">fadeTo</span>(<span class="orange">500</span>, <span class="orange">1</span>);
+      });
+      <span class="blue">$</span>(<span class="green">'.next'</span>).<span class="blue">on</span>(<span class="green">'click'</span>, <span class="violet">function</span>() {
+        <span class="blue">$</span>(<span class="green">'.next'</span>).<span class="blue">fadeTo</span>(<span class="orange">300</span>, <span class="orange">0</span>);
+        <span class="blue">$</span>(<span class="green">'.right'</span>).<span class="blue">fadeTo</span>(<span class="orange">300</span>, <span class="orange">1</span>);
+        <span class="blue">$</span>(<span class="green">'.right'</span>).<span class="blue">removeClass</span>(<span class="green">'invisible'</span>);
+        <span class="blue">$</span>(<span class="green">'.previous'</span>).<span class="blue">removeClass</span>(<span class="green">'invisible'</span>);
+        <span class="blue">$</span>(<span class="green">'.previous'</span>).<span class="blue">fadeTo</span>(<span class="orange">500</span>, <span class="orange">1</span>);
+        <span class="blue">$</span>(<span class="green">'.left'</span>).<span class="blue">fadeTo</span>(<span class="orange">500</span>, <span class="orange">0</span>);
+      });
+
+      <span class="blue">$</span>(<span class="green">'#aboutBttn'</span>).<span class="blue">on</span>(<span class="green">'click'</span>, event <span class="violet">=></span> {
+        <span class="blue">'remIDs'</span>();
+        <span class="blue">$</span>(<span class="green">'.mainPanel'</span>).<span class="blue">removeClass</span>(<span class="green">'hidden'</span>);
+        <span class="blue">$</span>(<span class="green">'#about'</span>).<span class="blue">removeClass</span>(<span class="green">'hidden'</span>);
+      });
+      <span class="blue">$</span>(<span class="green">'#projectBttn'</span>).<span class="blue">on</span>(<span class="green">'click'</span>, event <span class="violet">=></span> {
+        <span class="blue">'remIDs'</span>();
+        <span class="blue">$</span>(<span class="green">'.mainPanel'</span>).<span class="blue">removeClass</span>(<span class="green">'hidden'</span>);
+        <span class="blue">$</span>(<span class="green">'#projects'</span>).<span class="blue">removeClass</span>(<span class="green">'hidden'</span>);
+      });
+      <span class="blue">$</span>(<span class="green">'#contactBttn'</span>).<span class="blue">on</span>(<span class="green">'click'</span>, event <span class="violet">=></span> {
+        <span class="blue">'remIDs'</span>();
+        <span class="blue">$</span>(<span class="green">'.mainPanel'</span>).<span class="blue">removeClass</span>(<span class="green">'hidden'</span>);
+        <span class="blue">$</span>(<span class="green">'#contact'</span>).<span class="blue">removeClass</span>(<span class="green">'hidden'</span>);
+        <span class="blue">$</span>(<span class="green">'#contact'</span>).<span class="blue">show</span>();
+      });
+
+      <span class="blue">$</span>(<span class="green"><span class="green">'.tile'</span></span>).<span class="blue">on</span>(<span class="green">'mouseover'</span>, <span class="violet">function</span>(){
+          <span class="blue">$</span>(<span class="red">this</span>).<span class="blue">children</span>(<span class="green">'.photo'</span>).<span class="blue">css</span>({
+            <span class="green">'transform'</span>: <span class="green">'scale('</span>+ <span class="blue">$</span>(<span class="red">this</span>).<span class="blue">attr</span>(<span class="green">'data-scale'</span>) +<span class="green">')'</span>
+          });
+        }).<span class="blue">on</span>(<span class="green">'mouseout'</span>, <span class="violet">function</span>(){
+          <span class="blue">$</span>(<span class="red">this</span>).<span class="blue">children</span>(<span class="green">'.photo'</span>).<span class="blue">css</span>({
+            <span class="green">'transform'</span>: <span class="green">'scale(1)'</span>
+          });
+        }).<span class="blue">on</span>(<span class="green">'mousemove'</span>, <span class="violet">function</span>(e){
+          <span class="blue">$</span>(<span class="red">this</span>).<span class="blue">children</span>(<span class="green">'.photo'</span>).<span class="blue">css</span>({
+            <span class="green">'transform-origin'</span>: ((<span class="red">e</span>.<span class="red">pageX</span> - <span class="blue">$</span>(<span class="red">this</span>).<span class="blue">offset</span>().<span class="red">left</span>) / <span class="blue">$</span>(<span class="red">this</span>).<span class="red">width</span>()) * <span class="orange">100</span> + <span class="green">'% '</span>
+            + ((<span class="red">e</span>.<span class="red">pageY</span> - <span class="blue">$</span>(<span class="red">this</span>).<span class="blue">offset</span>().<span class="red">top</span>) / <span class="blue">$</span>(<span class="red">this</span>).<span class="red">height</span>()) * <span class="orange">100</span> +<span class="green">'%'</span>
+          });
+        });
+
+        <span class="blue">$</span>(<span class="green">'.mailBox'</span>).<span class="blue">on</span>(<span class="green">'mouseover'</span>, <span class="violet">function</span>(){
+          <span class="blue">$</span>(<span class="red">this</span>).<span class="blue">children</span>(<span class="green">'.photo'</span>).<span class="blue">css</span>({
+            <span class="green">'transform'</span>: <span class="green">'scale('</span>+ <span class="blue">$</span>(<span class="red">this</span>).<span class="blue">attr</span>(<span class="green">'data-scale'</span>) +<span class="green">')'</span>
+          });
+        }).<span class="blue">on</span>(<span class="green">'mouseout'</span>, <span class="violet">function</span>(){
+          <span class="blue">$</span>(<span class="red">this</span>).<span class="blue">children</span>(<span class="green">'.photo'</span>).<span class="blue">css</span>({
+            <span class="green">'transform'</span>: <span class="green">'scale(1)'</span>
+          });
+        }).<span class="blue">on</span>(<span class="green">'mousemove'</span>, <span class="violet">function</span>(e){
+          <span class="blue">$</span>(<span class="red">this</span>).<span class="blue">children</span>(<span class="green">'.photo'</span>).<span class="blue">css</span>({
+            <span class="green">'transform-origin'</span>: ((<span class="red">e</span>.<span class="red">pageX</span> - <span class="blue">$</span>(<span class="red">this</span>).<span class="blue">offset</span>().<span class="red">left</span>) / <span class="blue">$</span>(<span class="red">this</span>).<span class="red">width</span>()) * <span class="orange">100</span> + <span class="green">'% '</span>
+            + ((<span class="red">e</span>.<span class="red">pageY</span> - <span class="blue">$</span>(<span class="red">this</span>).<span class="blue">offset</span>().<span class="red">top</span>) / <span class="blue">$</span>(<span class="red">this</span>).<span class="red">height</span>()) * <span class="orange">100</span> +<span class="green">'%'</span>
+          });
+        });
+
+        <span class="blue">$</span>(<span class="green">'#contact'</span>).<span class="blue">on</span>(<span class="green">'mouseover'</span>, <span class="violet">function</span>(){
+          <span class="blue">$</span>(<span class="green">'.mailBox'</span>).<span class="blue">children</span>(<span class="green">'.photo'</span>).<span class="blue">css</span>({
+            <span class="green">'transform'</span>: <span class="green">'scale('</span>+ <span class="blue">$</span>(<span class="green">'.mailBox'</span>).<span class="blue">attr</span>(<span class="green">'data-scale'</span>) +<span class="green">')'</span>
+          });
+        }).<span class="blue">on</span>(<span class="green">'mouseout'</span>, <span class="violet">function</span>(){
+          <span class="blue">$</span>(<span class="green">'.mailBox'</span>).<span class="blue">children</span>(<span class="green">'.photo'</span>).<span class="blue">css</span>({
+            <span class="green">'transform'</span>: <span class="green">'scale(1)'</span>
+          });
+        }).<span class="blue">on</span>(<span class="green">'mousemove'</span>, <span class="violet">function</span>(e){
+          <span class="blue">$</span>(<span class="green">'.mailBox'</span>).<span class="blue">children</span>(<span class="green">'.photo'</span>).<span class="blue">css</span>({
+            <span class="green">'transform-origin'</span>: ((<span class="red">e</span>.<span class="red">pageX</span> - <span class="blue">$</span>(<span class="red">this</span>).<span class="blue">offset</span>().<span class="red">left</span>) / <span class="blue">$</span>(<span class="red">this</span>).<span class="red">width</span>()) * <span class="orange">100</span> + <span class="green">'% '</span>
+            + ((<span class="red">e</span>.<span class="red">pageY</span> - <span class="blue">$</span>(<span class="red">this</span>).<span class="blue">offset</span>().<span class="red">top</span>) / <span class="blue">$</span>(<span class="red">this</span>).<span class="red">height</span>()) * <span class="orange">100</span> +<span class="green">'%'</span>
+          });
+        });
+
+        <span class="blue">$</span>(<span class="green">'.tile'</span>).<span class="blue">on</span>(<span class="green">'click'</span>, event <span class="violet">=></span> {
+          <span class="blue">remClass</span>();
+          <span class="blue">$</span>(<span class="green">'.langDescr'</span>).<span class="blue">toggleClass</span>(<span class="green">'hidden'</span>);
+          <span class="violet">if</span>(<span class="blue">$</span>(<span class="red">event</span>.<span class="red">currentTarget</span>).<span class="blue">hasClass</span>(<span class="green">'JQ'</span>)){
+            <span class="blue">showTriangle</span>(<span class="green">'JQ'</span>);
+            <span class="blue">$</span>(<span class="green">'.JQDescr'</span>).<span class="blue">toggleClass</span>(<span class="green">'hidden'</span>);
+          } <span class="violet">else if</span>(<span class="blue">$</span>(<span class="red">event</span>.<span class="red">currentTarget</span>).<span class="blue">hasClass</span>(<span class="green">'JS'</span>)){
+            <span class="blue">showTriangle</span>(<span class="green">'JS'</span>);
+            <span class="blue">$</span>(<span class="green">'.JSDescr'</span>).<span class="blue">toggleClass</span>(<span class="green">'hidden'</span>);
+          } <span class="violet">else if</span>(<span class="blue">$</span>(<span class="red">event</span>.<span class="red">currentTarget</span>).<span class="blue">hasClass</span>(<span class="green">'CSS'</span>)){
+            <span class="blue">showTriangle</span>(<span class="green">'CSS'</span>);
+            <span class="blue">$</span>(<span class="green">'.CSSDescr'</span>).<span class="blue">toggleClass</span>(<span class="green">'hidden'</span>);
+          } <span class="violet">else if</span>(<span class="blue">$</span>(<span class="red">event</span>.<span class="red">currentTarget</span>).<span class="blue">hasClass</span>(<span class="green">'HTML5'</span>)){
+            <span class="blue">showTriangle</span>(<span class="green">'HTML5'</span>);
+            <span class="blue">$</span>(<span class="green">'.HTML5Descr'</span>).<span class="blue">toggleClass</span>(<span class="green">'hidden'</span>);
+          } <span class="violet">else if</span>(<span class="blue">$</span>(<span class="red">event</span>.<span class="red">currentTarget</span>).<span class="blue">hasClass</span>(<span class="green">'CSh'</span>)){
+            <span class="blue">showTriangle</span>(<span class="green">'CSh'</span>);
+            <span class="blue">$</span>(<span class="green">'.CShDescr'</span>).<span class="blue">toggleClass</span>(<span class="green">'hidden'</span>);
+          }
+        });
+
+        <span class="gray">// functions</span>
+        <span class="violet">function</span> <span class="blue">showTriangle</span>(place){
+          <span class="blue">$</span>(<span class="green">'.triangle'</span>).<span class="blue">removeClass</span>(<span class="green">'hidden'</span>);
+          <span class="violet">switch</span> (place){
+            <span class="violet">case</span> <span class="green">'JQ'</span>:
+              <span class="blue">$</span>(<span class="green">'.triangle'</span>).<span class="blue">css</span>(<span class="green">'left'</span>, <span class="green">'86.8%'</span>);
+              <span class="violet">break</span>;
+            <span class="violet">case</span> <span class="green">'JS'</span>:
+              <span class="blue">$</span>(<span class="green">'.triangle'</span>).<span class="blue">css</span>(<span class="green">'left'</span>, <span class="green">'67%'</span>);
+              <span class="violet">break</span>;
+            <span class="violet">case</span> <span class="green">'CSS'</span>:
+              <span class="blue">$</span>(<span class="green">'.triangle'</span>).<span class="blue">css</span>(<span class="green">'left'</span>, <span class="green">'47.4%'</span>);
+              <span class="violet">break</span>;
+            <span class="violet">case</span> <span class="green">'HTML5'</span>:
+              <span class="blue">$</span>(<span class="green">'.triangle'</span>).<span class="blue">css</span>(<span class="green">'left'</span>, <span class="green">'27%'</span>);
+              <span class="violet">break</span>;
+            <span class="violet">case</span> <span class="green">'CSh'</span>:
+              <span class="blue">$</span>(<span class="green">'.triangle'</span>).<span class="blue">css</span>(<span class="green">'left'</span>, <span class="green">'7%'</span>);
+          }
+        };
+
+        <span class="violet">function</span> <span class="blue">remIDs</span>(){
+          <span class="blue">$</span>(<span class="green">'#flyingDots'</span>).<span class="blue">addClass</span>(<span class="green">'hidden'</span>);
+          <span class="blue">$</span>(<span class="green">'#about'</span>).<span class="blue">addClass</span>(<span class="green">'hidden'</span>);
+          <span class="blue">$</span>(<span class="green">'#projects'</span>).<span class="blue">addClass</span>(<span class="green">'hidden'</span>);
+          <span class="blue">$</span>(<span class="green">'#contact'</span>).<span class="blue">addClass</span>(<span class="green">'hidden'</span>);
+          <span class="blue">$</span>(<span class="green">'#contact'</span>).<span class="blue">hide</span>();
+          <span class="blue">$</span>(<span class="green">'.logo'</span>).<span class="blue">addClass</span>(<span class="green">'hidden'</span>);
+        };
+
+        <span class="violet">function</span> <span class="blue">remClass</span>(){
+          <span class="blue">$</span>(<span class="green">'.triangle'</span>).<span class="blue">addClass</span>(<span class="green">'hidden'</span>);
+          <span class="blue">$</span>(<span class="green">'.langDescr'</span>).<span class="blue">addClass</span>(<span class="green">'hidden'</span>);
+          <span class="blue">$</span>(<span class="green">'.CShDescr'</span>).<span class="blue">addClass</span>(<span class="green">'hidden'</span>);
+          <span class="blue">$</span>(<span class="green">'.HTML5Descr'</span>).<span class="blue">addClass</span>(<span class="green">'hidden'</span>);
+          <span class="blue">$</span>(<span class="green">'.CSSDescr'</span>).<span class="blue">addClass</span>(<span class="green">'hidden'</span>);
+          <span class="blue">$</span>(<span class="green">'.JSDescr'</span>).<span class="blue">addClass</span>(<span class="green">'hidden'</span>);
+          <span class="blue">$</span>(<span class="green">'.JQDescr'</span>).<span class="blue">addClass</span>(<span class="green">'hidden'</span>);
+        };
+    });
+
+  </code>
+</pre>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div id="contact">
+        <div class="contact-form">
+          <form id="contact-form" method="post" action="contact-form-handler.php">
+            <input name="name" type="text" class="form-control" placeholder="Your name" requiered>
+            <br>
+            <input name="email" type="email" class="form-control" placeholder="Your e-mail" requiered>
+            <br>
+            <textarea name="message" class="form-control" placeholder="Message" row="4" required></textarea>
+            <br>
+            <input type="submit" class="form-control submit" value="SEND">
+          </form>
+        </div>
+        <div class="contactPhoto">
+          <div class="mailBox" data-scale="1.2"><div class="photo" style="background-image: url('pictures/mail_box.png')"></div></div>
+        </div>
+      </div>
+    </div>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+  <script src='jQuery.js'></script>
+  <script src='canvasScpt.js'></script>
+  <script src='flyingDots.js'></script>
+  </body>
+</html>
