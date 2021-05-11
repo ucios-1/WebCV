@@ -1,4 +1,4 @@
-$(document).ready(() => {
+
 
   $('.menuLines').click(function(){
     $(this).toggleClass('is-active');
@@ -153,4 +153,3 @@ $(document).ready(() => {
       $('.JSDescr').addClass('hidden');
       $('.JQDescr').addClass('hidden');
     };
-});
